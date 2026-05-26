@@ -1,3 +1,4 @@
+
 #Day 1 Python Practice Questions
 print("Python setup successful")
 
