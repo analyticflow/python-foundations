@@ -59,7 +59,7 @@ print(count)
 # Q8 Print all characters of a string using while loop
 name = input("Enter your name :")
 i = 0
-while i < len(name): # Took the help from ai
+while i < len(name): 
     print(name[i])
     i=i+1
 
@@ -70,7 +70,7 @@ i = 0
 largest = numberlist[0]
 while i < len(numberlist):
     if numberlist[i] > largest: 
-        largest = numberlist[i] # Took the help from ai
+        largest = numberlist[i] 
     i=i+1
 print(largest)
 

@@ -71,7 +71,7 @@ even_odd(number)
 def count_vowels(name):
     count = 0
     for i in name:
-     if i in 'aeiou': # took help in this line 
+     if i in 'aeiou': 
         count = count + 1
     print(count)
 
