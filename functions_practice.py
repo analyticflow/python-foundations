@@ -1,5 +1,108 @@
 # ----------------------------------------------------- FUNCTIONS PRACTICE ------------------------------------------------------
 
+
+# 1. Basic Functions
+# 2. Parameters
+# 3. Arguments
+# 4. Return Statement
+# 5. Local Variables
+# 6. Global Variables
+# 7. global Keyword
+# 8. Default Arguments
+# 9. Keyword Arguments
+# 10. *args
+# 11. **kwargs
+# 12. Lambda Functions
+# 13. Recursion
+
+
+
+# Local Variable
+def show_local():
+    x = 10
+    print(x)
+show_local()
+
+
+# Global Variable
+x = 100
+def show_global():
+    x=89
+    print(x)
+show_global()
+print(x)
+
+
+# global Keyword
+count = 0
+def increase():
+    global count 
+    count += 1
+increase()
+print(count)
+
+
+# Default Argument
+def greet(name="Guest"):
+    print("Hello",name)
+greet()
+greet("Python")
+
+
+# Keyword Argument
+def student(name, age):
+    print(name,age)
+student(age=21,name="Python")
+
+
+# *args
+def add(*numbers):
+    print(sum(numbers))
+add(10,20,30)
+
+#  Write a function using *args that returns total of all numbers.
+def total(*numbers):
+    print("Total =",sum(numbers))
+total(56,89,23,87)
+
+
+# **kwargs
+def show_kwargs(**data):
+    print(data)
+show_kwargs(name="Python", age=21)
+
+
+# # Write a function using **kwargs that prints all key-value pairs.
+def show_kwargs(**data):
+        for key, value in data.items():
+            print(key, "=", value)
+show_kwargs(name = "Python", age = 21)
+
+
+# Lambda Functions
+def square(x):
+    return x*x
+print(square(6))
+#----------------
+square = lambda x: x * x
+print(square(5))
+
+
+# # Create lambda function that multiplies a number by 10.
+multi = lambda x: x * 10
+print(multi(5))
+
+
+# Recursion
+def countdown(n):
+    if n == 0:
+        return
+    print(n)
+    countdown(n-1)
+countdown(15)
+
+
+
 # Q1 Create function that prints Hello World
 def greet():
     print("Hello World")
@@ -256,4 +359,3 @@ def reverse_string(username):
 
 userinput = input("Enter you string : ")
 print(reverse_string(userinput))
-    
