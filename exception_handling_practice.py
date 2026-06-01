@@ -149,3 +149,41 @@ try:
 
 except ValueError as e:
     print(e)
+
+
+    # Q3 File Not Found
+
+try:
+    with open("unknown.txt", "r") as file:
+        print(file.read())
+
+except FileNotFoundError:
+    print("File not found")
+
+
+# Q4 Marks Validation
+
+try:
+    marks = int(input("Enter marks : "))
+
+    if marks < 0 or marks > 100:
+        raise ValueError("Marks must be between 0 and 100")
+
+    print("Marks accepted")
+
+except ValueError as e:
+    print(e)
+
+
+# Q5 Username Validation
+
+try:
+    username = input("Enter username : ")
+
+    if username == "":
+        raise ValueError("Username cannot be empty")
+
+    print("Welcome", username)
+
+except ValueError as e:
+    print(e)
