@@ -2,9 +2,7 @@
 #                                          EXCEPTION HANDLING PRACTICE
 # =====================================================================================================================
 
-# -----------------------------------
-# COMMON EXCEPTIONS
-# -----------------------------------
+# ----------------------------------- COMMON EXCEPTIONS -----------------------------------
 
 # ZeroDivisionError
 # print(10 / 0)
@@ -13,9 +11,7 @@
 # num = int(input("Enter number : "))
 
 
-# -----------------------------------
-# TRY - EXCEPT
-# -----------------------------------
+# -----------------------------------TRY - EXCEPT -----------------------------------
 
 try:
     print(10 / 0)
@@ -30,9 +26,7 @@ except:
     print("Something went wrong")
 
 
-# -----------------------------------
-# SPECIFIC EXCEPTIONS
-# -----------------------------------
+# ----------------------------------- SPECIFIC EXCEPTIONS -----------------------------------
 
 try:
     num = int(input("Enter number : "))
@@ -53,9 +47,7 @@ except ZeroDivisionError:
     print("Number cannot be divided by 0")
 
 
-# -----------------------------------
-# ELSE
-# -----------------------------------
+# ----------------------------------- ELSE -----------------------------------
 
 try:
     num = int(input("Enter number : "))
@@ -68,9 +60,7 @@ else:
     print("Everything worked successfully")
 
 
-# -----------------------------------
-# FINALLY
-# -----------------------------------
+# ----------------------------------- FINALLY -----------------------------------
 
 try:
     num = int(input("Enter number : "))
@@ -86,9 +76,7 @@ finally:
     print("Program finished")
 
 
-# -----------------------------------
-# RAISE
-# -----------------------------------
+# ----------------------------------- RAISE -----------------------------------
 
 age = int(input("Enter your age : "))
 
@@ -106,9 +94,7 @@ if withdraw > balance:
     raise ValueError("Insufficient Balance")
 
 
-# -----------------------------------
-# CUSTOM EXCEPTIONS
-# -----------------------------------
+# ----------------------------------- CUSTOM EXCEPTIONS  -----------------------------------
 
 class AgeError(Exception):
     pass
@@ -120,6 +106,36 @@ if age < 18:
     raise AgeError("Age must be 18 or above")
 
 print("Access Granted!")
+
+
+# ------------------------------------ Multiple Exception -----------------------------------------
+
+try:
+    num = int(input("enter num :"))
+    print(100/num)
+
+except(ValueError, ZeroDivisionError):
+    print("Invalid input")
+
+
+# ------------------------------------ Catch Actual Error Message -----------------------------------------
+
+try:
+    num = int(input("enter number :"))
+
+except ValueError as e:
+    print("error :",e)
+
+# ---------------------------------------Generic Exception------------------------------------------------
+
+try:
+    num = int(input("enter number : "))
+    result = 100/num
+    print(result)
+
+except Exception as e: # catches any unexpected error
+    print("error :",e)
+
 
 
 # =====================================================================================================================
@@ -150,8 +166,7 @@ try:
 except ValueError as e:
     print(e)
 
-
-    # Q3 File Not Found
+   # Q3 File Not Found
 
 try:
     with open("unknown.txt", "r") as file:
@@ -178,12 +193,71 @@ except ValueError as e:
 # Q5 Username Validation
 
 try:
-    username = input("Enter username : ")
+    username = input("enter name : ")
 
     if username == "":
-        raise ValueError("Username cannot be empty")
-
-    print("Welcome", username)
+        raise ValueError("Username can not be empty")
+    
+    elif username.isdigit():
+        raise ValueError("username name can not be a number")
+    
+    print("Welcome",username)
 
 except ValueError as e:
     print(e)
+
+
+# Q6 Name Validation
+
+try:
+    name = input("enter name :")
+
+    if name == "":
+        raise ValueError("name can not be empty")
+    
+    if any(char.isdigit() for char in name):
+        raise ValueError("name can not contain numbers")
+
+    print("Welcome", name)
+
+except ValueError as e:
+    print(e)
+
+
+# # Q7 Email Validation (Simple)
+try:
+    email = input("enter email")
+
+    if "@" not in email:
+        raise ValueError("invalid email")
+    
+    print("email accepted = ",email)
+
+except ValueError as e:
+    print(e)
+
+
+# ATM Program : Requirements:
+#                 Balance = 1000
+#                 Ask withdrawal amount
+#                 If user enters text → show error
+#                 If amount ≤ 0 → raise error
+#                 If amount > balance → raise error
+#                 Otherwise print:
+#                             Withdrawal Successful
+#                             Remaining Balance = xxx
+
+try:
+    balance = 1000
+    withdrawal = int(input("enter amount :"))
+
+    if withdrawal <= 0:
+        raise ValueError("Amount must be greater than 0")    
+    elif withdrawal > balance:
+        raise ValueError("not enough balance")
+    
+    print("Withdrawal Successful")
+    print("Remaining Amount =",balance-withdrawal)
+
+except ValueError as e:
+    print("Error : ",e)
