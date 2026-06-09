@@ -193,6 +193,155 @@ p1.sell(20)
 
 p1.sell(-5)
 
-    
+# -------------------------------School Report Card System-------------------------------
 
-        
+class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def show_details(self):
+        print(f"Name = {self.name}")
+        print(f"Marks = {self.marks}")
+
+    def grade(self):
+
+        if 90 <= self.marks <= 100:
+            print("Grade = A")
+
+        elif 75 <= self.marks < 90:
+            print("Grade = B")
+
+        elif 40 <= self.marks < 75:
+            print("Grade = C")
+
+        elif 0 <= self.marks < 40:
+            print("Grade = F")
+
+        else:
+            print("Invalid Marks")
+
+        print("-" * 80)
+
+
+s1 = Student("Rahul", 85)
+
+s1.show_details()
+s1.grade()
+
+
+# -------------------------------Vehicle Rental System-------------------------------
+
+class Vehicle:
+
+    def __init__(self, vehicle_name):
+        self.vehicle_name = vehicle_name
+        self.is_rented = False
+
+    def rent_vehicle(self):
+
+        if self.is_rented:
+            print("Vehicle already rented")
+
+        else:
+            self.is_rented = True
+            print("Vehicle rented successfully")
+
+    def return_vehicle(self):
+
+        if not self.is_rented:
+            print("Vehicle already available")
+
+        else:
+            self.is_rented = False
+            print("Vehicle returned successfully")
+
+        print("-" * 80)
+
+
+v1 = Vehicle("Car")
+
+v1.rent_vehicle()
+v1.rent_vehicle()
+
+v1.return_vehicle()
+v1.return_vehicle()
+
+
+# -------------------------------E-Commerce Order System-------------------------------
+
+class Order:
+
+    def __init__(self, product, price):
+        self.product = product
+        self.price = price
+        self.is_delivered = False
+
+    def show_details(self):
+        print(f"Product = {self.product}")
+        print(f"Price = {self.price}")
+
+    def deliver_order(self):
+
+        if self.is_delivered:
+            print("Order already delivered")
+
+        else:
+            self.is_delivered = True
+            print("Order delivered successfully")
+
+        print("-" * 80)
+
+
+o1 = Order("Laptop", 50000)
+
+o1.show_details()
+o1.deliver_order()
+o1.deliver_order()
+
+
+# -------------------------------Hospital Management System-------------------------------
+
+class Patient:
+
+    def __init__(self, name, disease):
+        self.name = name
+        self.disease = disease
+
+    def show_details(self):
+        print(f"Patient Name = {self.name}")
+        print(f"Disease = {self.disease}")
+
+        print("-" * 80)
+
+
+p1 = Patient("Rahul", "Fever")
+p1.show_details()
+
+
+# -------------------------------Student Attendance Tracker-------------------------------
+
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+        self.attendance = 0
+
+    def mark_attendance(self):
+        self.attendance += 1
+
+    def show_attendance(self):
+        print(f"Name = {self.name}")
+        print(f"Attendance = {self.attendance}")
+
+        print("-" * 80)
+
+
+s1 = Student("Rahul")
+
+s1.mark_attendance()
+s1.mark_attendance()
+s1.mark_attendance()
+
+s1.show_attendance()
