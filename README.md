@@ -11,37 +11,59 @@ This repository contains my Python learning journey from beginner to advanced.
 * Collections
 * Functions
 * File Handling
+* Exception Handling
+* Object-Oriented Programming (OOP)
+
+## OOP Concepts Covered
+
+* Classes and Objects
+* Constructors
+* Attributes and Methods
+* Encapsulation
+* Inheritance
+* Polymorphism
+* Method Overriding
+* Menu Driven Programs
+
+## OOP Practice Completed
+
+* Student Result System
+* Employee Bonus System
+* Bank Account System
+* Library Book System
+* Product Inventory System
+* School Report Card System
+* Vehicle Rental System
+* E-Commerce Order System
+* Hospital Management System
+* Student Attendance Tracker
+* Movie Ticket Booking System
+
+## OOP Project Completed
+
+* RPG Battle Arena System
+
+### Features
+
+* Character Creation
+* Warrior, Mage and Archer Classes
+* Inheritance and Polymorphism
+* Search Character
+* Remove Character
+* Battle System
+* Menu Driven Interface
 
 ## Current Topic
 
-Exception Handling
-
-### Topics Covered
-
-* Errors
-* Exceptions
-* try
-* except
-* else
-* finally
-* raise
-* Custom Exceptions
-
-### Practice Completed
-
-* Negative Number Validation
-* Password Length Validation
-* Age Validation
-* Bank Withdrawal Validation
-* Custom Age Exception
+* Preparing for Python Phase 2
 
 ## Upcoming Topics
 
 * Modules & Packages
-* Object-Oriented Programming (OOP)
 * Advanced Python
-* Data Handling
-* SQL Integration
+* SQL Fundamentals
+* Excel
+* Data Analytics
 
 ## Goal
 
